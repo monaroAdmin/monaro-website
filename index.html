@@ -192,7 +192,44 @@ radial-gradient(circle at bottom right, rgba(128,0,255,.06), transparent 40%),
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
     }
+.photo-strip{
+    width:100%;
+    overflow:hidden;
+    padding:40px 0 80px;
+    position:relative;
+}
 
+.photo-track{
+    display:flex;
+    gap:24px;
+    width:max-content;
+    animation:photoScroll 38s linear infinite;
+}
+
+.photo-track img{
+    width:260px;
+    height:170px;
+    object-fit:cover;
+    border-radius:18px;
+    filter:grayscale(100%);
+    opacity:.95;
+    transition:.35s;
+}
+
+.photo-track img:hover{
+    transform:translateY(-8px);
+    opacity:1;
+}
+
+@keyframes photoScroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
     /* ABOUT */
     #about { padding: 140px 0 120px; }
     .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
@@ -542,7 +579,25 @@ radial-gradient(circle at bottom right, rgba(128,0,255,.06), transparent 40%),
       <span class="marquee-item">Available for Booking <span class="sep">·</span></span>
     </div>
   </div>
+<section class="photo-strip">
+    <div class="photo-track">
 
+        <img src="assets/images/PHOTO1.PNG" alt="">
+        <img src="assets/images/PHOTO2.PNG" alt="">
+        <img src="assets/images/PHOTO3.PNG" alt="">
+        <img src="assets/images/PHOTO4.PNG" alt="">
+        <img src="assets/images/PHOTO5.PNG" alt="">
+
+        <!-- Повторяем фотографии для бесконечной прокрутки -->
+
+        <img src="assets/images/PHOTO1.PNG" alt="">
+        <img src="assets/images/PHOTO2.PNG" alt="">
+        <img src="assets/images/PHOTO3.PNG" alt="">
+        <img src="assets/images/PHOTO4.PNG" alt="">
+        <img src="assets/images/PHOTO5.PNG" alt="">
+
+    </div>
+</section>
   <!-- ABOUT -->
   <section id="about">
     <div class="section-inner">
