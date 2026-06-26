@@ -198,27 +198,6 @@ radial-gradient(circle at bottom right, rgba(128,0,255,.06), transparent 40%),
     padding:40px 0 80px;
     position:relative;
 }
-    
-.photo-strip::before,
-.photo-strip::after{
-    content:"";
-    position:absolute;
-    top:0;
-    width:180px;
-    height:100%;
-    z-index:5;
-    pointer-events:none;
-}
-
-.photo-strip::before{
-    left:0;
-    background:linear-gradient(to right,#070707 0%,transparent 100%);
-}
-
-.photo-strip::after{
-    right:0;
-    background:linear-gradient(to left,#070707 0%,transparent 100%);
-}
 .photo-track{
     display:flex;
     gap:24px;
