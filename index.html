@@ -912,11 +912,15 @@ radial-gradient(circle at bottom right, rgba(128,0,255,.06), transparent 40%),
   <div class="divider"></div>
 
 <!-- PRESENCE -->
+<!-- =========================
+     PRESENCE
+========================== -->
+
 <section id="presence">
 
     <div class="section-inner">
 
-        <div class="presence-top">
+        <div class="presence-head">
 
             <div class="presence-left reveal">
 
@@ -935,53 +939,149 @@ radial-gradient(circle at bottom right, rgba(128,0,255,.06), transparent 40%),
             <div class="presence-right reveal reveal-delay-1">
 
                 <p>
-                    A performance is never just music.
-                    Every venue creates a different atmosphere.
-                    Every audience becomes part of the story.
+                    Every performance creates its own atmosphere.
+                    Every venue becomes part of the story.
+                    Music simply connects them together.
                 </p>
 
             </div>
 
         </div>
 
-        <div class="presence-map reveal reveal-delay-2">
 
-            <div class="presence-line"></div>
+        <div class="presence-network reveal reveal-delay-2">
 
-            <div class="presence-node node-1">
-                <span></span>
-                <small>Luxury Hotels</small>
-            </div>
+            <svg class="presence-svg"
+                 viewBox="0 0 1200 420"
+                 preserveAspectRatio="xMidYMid meet">
 
-            <div class="presence-node node-2">
-                <span></span>
-                <small>Private Events</small>
-            </div>
+                <!-- CONNECTIONS -->
 
-            <div class="presence-node node-3">
-                <span></span>
-                <small>Destination Weddings</small>
-            </div>
+                <path
+                    class="connection"
+                    d="M170 220 C260 150 380 145 520 205" />
 
-            <div class="presence-node node-4">
-                <span></span>
-                <small>Nightclubs</small>
-            </div>
+                <path
+                    class="connection"
+                    d="M520 205 C640 255 720 270 860 220" />
 
-            <div class="presence-node node-5">
-                <span></span>
-                <small>Brand Launches</small>
-            </div>
+                <path
+                    class="connection"
+                    d="M520 205 C470 300 350 320 240 285" />
 
-            <div class="presence-node node-6">
-                <span></span>
-                <small>Rooftops</small>
-            </div>
+                <path
+                    class="connection"
+                    d="M860 220 C960 165 1040 145 1110 170" />
 
-            <div class="presence-node node-7">
-                <span></span>
-                <small>Beach Clubs</small>
-            </div>
+
+
+                <!-- OUTER RINGS -->
+
+                <circle class="ring ring-main"
+                        cx="520"
+                        cy="205"
+                        r="58"/>
+
+                <circle class="ring ring-main-2"
+                        cx="520"
+                        cy="205"
+                        r="90"/>
+
+
+
+                <!-- NODES -->
+
+                <g class="node n1">
+
+                    <circle
+                        class="dot small"
+                        cx="170"
+                        cy="220"
+                        r="10"/>
+
+                    <text
+                        x="170"
+                        y="258">
+
+                        Luxury Hotels
+
+                    </text>
+
+                </g>
+
+
+
+                <g class="node n2">
+
+                    <circle
+                        class="dot medium"
+                        cx="240"
+                        cy="285"
+                        r="13"/>
+
+                    <text
+                        x="240"
+                        y="324">
+
+                        Weddings
+
+                    </text>
+
+                </g>
+
+
+
+                <g class="node center">
+
+                    <circle
+                        class="dot main"
+                        cx="520"
+                        cy="205"
+                        r="22"/>
+
+                </g>
+
+
+
+                <g class="node n3">
+
+                    <circle
+                        class="dot medium"
+                        cx="860"
+                        cy="220"
+                        r="13"/>
+
+                    <text
+                        x="860"
+                        y="258">
+
+                        Nightlife
+
+                    </text>
+
+                </g>
+
+
+
+                <g class="node n4">
+
+                    <circle
+                        class="dot small"
+                        cx="1110"
+                        cy="170"
+                        r="9"/>
+
+                    <text
+                        x="1110"
+                        y="208">
+
+                        Rooftops
+
+                    </text>
+
+                </g>
+
+            </svg>
 
         </div>
 
