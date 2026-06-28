@@ -913,6 +913,9 @@ PRESENCE — RESPONSIVE
     }
 
 }
+
+/* PRESENCE REDESIGN */
+#presence{position:relative;padding:112px 0 94px;overflow:hidden;background:#070707}#presence::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 47%,rgba(255,255,255,.04),transparent 40%)}.presence-shell{max-width:1500px;margin:auto;position:relative;z-index:1}#presence .presence-header{max-width:none;margin:0;padding:0 32px;text-align:center}.presence-kicker{color:#eee;font-size:14px;letter-spacing:.32em;text-transform:uppercase;margin-bottom:15px}#presence .presence-title{margin:0;color:#f4f4f4;font-family:'Inter',sans-serif;font-size:clamp(30px,3.25vw,50px);font-weight:300;line-height:1.15;letter-spacing:.105em;text-transform:uppercase}#presence .presence-intro{width:auto;max-width:none;margin:32px auto 0;color:#d2d2d2;font-size:clamp(15px,1.4vw,21px);font-weight:300;line-height:1.55;letter-spacing:.01em}.presence-network{position:relative;height:310px;margin-top:32px;display:grid;grid-template-columns:repeat(7,1fr);align-items:center}.presence-paths{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.presence-paths path{fill:none;stroke:rgba(255,255,255,.27);stroke-width:.65;vector-effect:non-scaling-stroke}.presence-paths path:nth-child(even){stroke:rgba(255,255,255,.13)}.city-node{position:relative;z-index:2;text-align:center;min-width:0}.city-orbit{width:116px;height:116px;margin:auto;border:1px solid rgba(255,255,255,.34);border-radius:50%;display:grid;place-items:center;position:relative;animation:presenceFloat 6s ease-in-out infinite}.city-node:nth-of-type(even) .city-orbit{animation-delay:-2s}.city-node:nth-of-type(3n) .city-orbit{animation-delay:-4s}.city-orbit::before,.city-orbit::after{content:"";position:absolute;border:1px solid rgba(255,255,255,.2);border-radius:50%;inset:8px -24px;transform:rotate(28deg)}.city-orbit::after{inset:-13px 9px;transform:rotate(-35deg);opacity:.58}.city-core{position:relative;z-index:2;width:82px;height:82px;border-radius:50%;display:grid;place-items:center;color:#f7f7f7;font-size:27px;font-weight:300;background:radial-gradient(circle at 40% 32%,#5c5c5c 0,#1b1b1b 34%,#070707 72%);border:1px solid rgba(255,255,255,.72);box-shadow:inset 0 0 18px rgba(255,255,255,.17),0 0 18px rgba(255,255,255,.12)}.city-core::after{content:"";position:absolute;inset:-2px;border-radius:inherit;box-shadow:0 -5px 12px rgba(255,255,255,.25)}.city-orbit i{position:absolute;z-index:3;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 7px #fff}.city-orbit i:first-of-type{top:2px;left:21px}.city-orbit i:last-of-type{right:3px;bottom:18px}.city-name{margin-top:50px;color:#f1f1f1;font-size:15px;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}.city-country{margin-top:4px;color:#9a9a9a;font-size:13px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}.city-node--main .city-orbit{width:150px;height:150px}.city-node--main .city-orbit::before{inset:-22px;border-style:dashed;transform:none}.city-node--main .city-orbit::after{inset:-43px;border-style:dotted;transform:none;opacity:.65}.city-node--main .city-core{width:116px;height:116px;font-size:49px}.city-node--main .city-name{margin-top:33px}.presence-stats{max-width:1252px;margin:50px auto 0;min-height:116px;padding:26px 40px;border:1px solid rgba(255,255,255,.2);border-radius:17px;display:grid;grid-template-columns:repeat(4,1fr);align-items:center}.presence-stat{min-height:58px;padding:0 28px;display:grid;grid-template-columns:52px 1fr;align-items:center;gap:18px;border-right:1px solid rgba(255,255,255,.14)}.presence-stat:last-child{border-right:0}.presence-stat svg{width:52px;height:52px;stroke:#999;fill:none;stroke-width:1.4}.presence-stat strong,.presence-stat span{display:block;text-transform:uppercase}.presence-stat strong{color:#eee;font-size:13px;font-weight:400;letter-spacing:.08em}.presence-stat span{margin-top:5px;color:#777;font-size:11px;letter-spacing:.1em}@keyframes presenceFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}@media(max-width:1050px){.presence-network{width:1120px}.presence-network-wrap{overflow-x:auto;overflow-y:hidden;scrollbar-width:none}.presence-network-wrap::-webkit-scrollbar{display:none}.presence-stats{margin-left:28px;margin-right:28px;grid-template-columns:repeat(2,1fr)}.presence-stat:nth-child(2){border-right:0}.presence-stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:20px}.presence-stat:nth-child(n+3){padding-top:20px}}@media(max-width:600px){#presence{padding:82px 0 70px}#presence .presence-title{font-size:25px;letter-spacing:.07em}#presence .presence-intro{font-size:14px}.presence-network{margin-top:18px}.presence-stats{grid-template-columns:1fr;padding:15px 24px;margin-top:25px}.presence-stat,.presence-stat:nth-child(2){border-right:0;border-bottom:1px solid rgba(255,255,255,.14);padding:18px 8px}.presence-stat:last-child{border-bottom:0}}
     /* MOBILE */
     @media (max-width: 900px) {
       nav { padding: 24px 28px; }
@@ -1229,156 +1232,7 @@ PRESENCE — RESPONSIVE
      PRESENCE
 ======================================================= -->
 
-<section id="presence">
-
-    <div class="section-inner">
-
-        <div class="presence-header">
-
-            <div class="section-label reveal">
-                PRESENCE
-            </div>
-
-            <h2 class="presence-title reveal reveal-delay-1">
-                Every city.<br>
-                Every crowd.<br>
-                Every night.
-            </h2>
-
-            <p class="presence-intro reveal reveal-delay-2">
-                Every performance creates a different atmosphere
-                Music simply connects them
-            </p>
-
-        </div>
-
-        <div class="presence-map reveal reveal-delay-3">
-
-        <svg class="presence-svg"
-        viewBox="0 0 900 520"
-        preserveAspectRatio="xMidYMid meet">
-                <!-- lines -->
-
-<path class="p-line"
-d="M180 285
-C260 175 355 165 450 255"/>
-
-<path class="p-line"
-d="M450 255
-C540 340 615 340 700 255"/>
-
-<path class="p-line"
-d="M450 255
-C405 365 305 385 235 320"/>
-
-<path class="p-line"
-d="M700 255
-C760 185 820 175 850 205"/>
-
-                <!-- MONARO -->
-
-                <g class="atom atom-main">
-
-                    <circle class="orbit orbit-1"
-                        cx="450"
-                        cy="255"
-                        r="72"/>
-
-                    <circle class="orbit orbit-2"
-                        cx="450"
-                        cy="255"
-                        r="108"/>
-
-                    <circle class="core"
-                        cx="450"
-                        cy="255"
-                        r="24"/>
-
-                </g>
-
-                <!-- Luxury -->
-
-                <g class="atom atom-a">
-
-                    <circle class="node"
-                        cx="180"
-                        cy="285"
-                        r="8"/>
-
-                    <text
-                        x="180"
-                        y="325">
-
-                        Luxury Hotels
-
-                    </text>
-
-                </g>
-
-                <!-- Weddings -->
-
-                <g class="atom atom-b">
-
-                    <circle class="node"
-                        cx="235"
-                        cy="320"
-                        r="11"/>
-
-                    <text
-                        x="235"
-                        y="360">
-
-                        Weddings
-
-                    </text>
-
-                </g>
-
-                <!-- Nightlife -->
-
-                <g class="atom atom-c">
-
-                    <circle class="node"
-                        cx="700"
-                        cy="255"
-                        r="11"/>
-
-                    <text
-                        x="700"
-                        y="295">
-
-                        Nightlife
-
-                    </text>
-
-                </g>
-
-                <!-- Rooftops -->
-
-                <g class="atom atom-d">
-
-                    <circle class="node"
-                        cx="850"
-                        cy="205"
-                        r="7"/>
-
-                    <text
-                        x="850"
-                        y="245">
-
-                        Rooftops
-
-                    </text>
-
-                </g>
-
-            </svg>
-
-        </div>
-
-    </div>
-
-</section>
+<section id="presence"><div class="presence-shell"><header class="presence-header reveal"><div class="presence-kicker">Presence</div><h2 class="presence-title">Sound without borders.<br>Present everywhere.</h2><p class="presence-intro">From Tashkent to the world.<br>Music connects places, cultures and people.</p></header><div class="presence-network-wrap reveal reveal-delay-1"><div class="presence-network"><svg class="presence-paths" viewBox="0 0 1500 310" preserveAspectRatio="none" aria-hidden="true"><path d="M45 148 C160 15 230 285 365 145 S590 242 750 145 S980 30 1125 145 S1360 260 1460 135"/><path d="M55 175 C175 270 275 40 430 170 S650 35 750 145 S905 275 1070 155 S1320 40 1450 170"/><path d="M80 132 C205 95 290 220 430 132 S650 195 750 145 S985 190 1130 130 S1345 195 1455 128"/></svg><div class="city-node"><div class="city-orbit"><i></i><div class="city-core">✧</div><i></i></div><div class="city-name">Tashkent</div><div class="city-country">Uzbekistan</div></div><div class="city-node"><div class="city-orbit"><i></i><div class="city-core">＋</div><i></i></div><div class="city-name">Dubai</div><div class="city-country">UAE</div></div><div class="city-node"><div class="city-orbit"><i></i><div class="city-core">○</div><i></i></div><div class="city-name">Istanbul</div><div class="city-country">Turkey</div></div><div class="city-node city-node--main"><div class="city-orbit"><i></i><div class="city-core">M</div><i></i></div><div class="city-name">Monaro</div><div class="city-country">Global</div></div><div class="city-node"><div class="city-orbit"><i></i><div class="city-core">◇</div><i></i></div><div class="city-name">Ibiza</div><div class="city-country">Spain</div></div><div class="city-node"><div class="city-orbit"><i></i><div class="city-core">▽</div><i></i></div><div class="city-name">Berlin</div><div class="city-country">Germany</div></div><div class="city-node"><div class="city-orbit"><i></i><div class="city-core">□</div><i></i></div><div class="city-name">Bangkok</div><div class="city-country">Thailand</div></div></div></div><div class="presence-stats reveal reveal-delay-2"><div class="presence-stat"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25"/><ellipse cx="30" cy="30" rx="11" ry="25"/><path d="M5 30h50M11 17h38M11 43h38M30 5v50"/></svg><div><strong>7+ Countries</strong><span>And growing</span></div></div><div class="presence-stat"><svg viewBox="0 0 60 60"><path d="M4 30h52M10 22v16M16 12v36M22 19v22M28 7v46M34 14v32M40 10v40M46 20v20M52 24v12"/></svg><div><strong>One sound</strong><span>Many places</span></div></div><div class="presence-stat"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25"/><circle cx="30" cy="30" r="16"/><circle cx="30" cy="30" r="8"/></svg><div><strong>Global presence</strong><span>Local connections</span></div></div><div class="presence-stat"><svg viewBox="0 0 60 60"><path d="M30 4v52M4 30h52M11 11l38 38M49 11L11 49M18 7l24 46"/></svg><div><strong>United by music</strong><span>Driven by passion</span></div></div></div></div></section>
 
   <!-- CONTACT / BOOK -->
   <section id="contact">
@@ -1651,7 +1505,7 @@ if (presence) {
 
 const presenceSvg = document.querySelector(".presence-svg");
 
-if (presenceSvg){
+if (presenceSvg && presenceSvg.querySelector(".atom-main")){
 
     const mainAtom = presenceSvg.querySelector(".atom-main");
 
