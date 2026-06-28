@@ -1538,7 +1538,144 @@ PRESENCE — RESPONSIVE
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.12 });
     reveals.forEach(r => observer.observe(r));
+// ── PRESENCE MOTION ──
 
+const presence = document.querySelector("#presence");
+
+if (presence) {
+
+    const atoms = presence.querySelectorAll(".atom");
+
+    const lines = presence.querySelectorAll(".p-line");
+
+    const presenceObserver = new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+
+            if(!entry.isIntersecting) return;
+
+            lines.forEach((line,index)=>{
+
+                line.style.strokeDasharray =
+                    line.getTotalLength();
+
+                line.style.strokeDashoffset =
+                    line.getTotalLength();
+
+                line.animate(
+
+                    [
+
+                        {
+                            strokeDashoffset:
+                            line.getTotalLength()
+                        },
+
+                        {
+                            strokeDashoffset:0
+                        }
+
+                    ],
+
+                    {
+
+                        duration:1300,
+
+                        delay:index*180,
+
+                        easing:"ease-out",
+
+                        fill:"forwards"
+
+                    }
+
+                );
+
+            });
+
+            atoms.forEach((atom,index)=>{
+
+                atom.animate(
+
+                    [
+
+                        {
+
+                            opacity:0,
+
+                            transform:
+                            "scale(.7)"
+
+                        },
+
+                        {
+
+                            opacity:1,
+
+                            transform:
+                            "scale(1)"
+
+                        }
+
+                    ],
+
+                    {
+
+                        duration:700,
+
+                        delay:500+index*170,
+
+                        easing:"ease-out",
+
+                        fill:"forwards"
+
+                    }
+
+                );
+
+            });
+
+            presenceObserver.disconnect();
+
+        });
+
+    },{
+
+        threshold:.35
+
+    });
+
+    presenceObserver.observe(presence);
+
+}
+    // ── PRESENCE PARALLAX ──
+
+const presenceSvg = document.querySelector(".presence-svg");
+
+if (presenceSvg){
+
+    const mainAtom = presenceSvg.querySelector(".atom-main");
+
+    presence.addEventListener("mousemove",(e)=>{
+
+        const rect = presence.getBoundingClientRect();
+
+        const x = (e.clientX-rect.left)/rect.width-.5;
+
+        const y = (e.clientY-rect.top)/rect.height-.5;
+
+        mainAtom.style.transform =
+            `translate(${x*8}px,${y*8}px) scale(1.03)`;
+
+    });
+
+    presence.addEventListener("mouseleave",()=>{
+
+        mainAtom.style.transform="translate(0,0) scale(1)";
+
+    });
+
+}
     // ── FORM ──
 async function handleForm(e) {
     e.preventDefault();
