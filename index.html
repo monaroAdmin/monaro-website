@@ -647,23 +647,54 @@ radial-gradient(circle at bottom right, rgba(128,0,255,.06), transparent 40%),
     <canvas id="waveCanvas"></canvas>
     <div class="hero-content">
 
-    <section class="photo-strip">
-        <div class="photo-track">
-            <img src="assets/images/PHOTO1.PNG" alt="">
-            <img src="assets/images/PHOTO2.PNG" alt="">
-            <img src="assets/images/PHOTO3.PNG" alt="">
-            <img src="assets/images/PHOTO4.PNG" alt="">
-            <img src="assets/images/PHOTO5.PNG" alt="">
+<section class="photo-strip">
+    <div class="photo-track">
 
-            <!-- Повторяем фотографии для бесконечной прокрутки -->
+        <img src="assets/images/PHOTO1.PNG"
+             alt="MONARO performing an open format DJ set"
+             loading="eager"
+             fetchpriority="high">
 
-            <img src="assets/images/PHOTO1.PNG" alt="">
-            <img src="assets/images/PHOTO2.PNG" alt="">
-            <img src="assets/images/PHOTO3.PNG" alt="">
-            <img src="assets/images/PHOTO4.PNG" alt="">
-            <img src="assets/images/PHOTO5.PNG" alt="">
-        </div>
-    </section>
+        <img src="assets/images/PHOTO2.PNG"
+             alt="MONARO artist portrait"
+             loading="lazy">
+
+        <img src="assets/images/PHOTO3.PNG"
+             alt="MONARO behind the DJ booth"
+             loading="lazy">
+
+        <img src="assets/images/PHOTO4.PNG"
+             alt="MONARO live performance in Phnom Penh"
+             loading="lazy">
+
+        <img src="assets/images/PHOTO5.PNG"
+             alt="Open format DJ MONARO"
+             loading="lazy">
+
+        <!-- Duplicate images for infinite scroll -->
+
+        <img src="assets/images/PHOTO1.PNG"
+             alt="MONARO performing an open format DJ set"
+             loading="lazy">
+
+        <img src="assets/images/PHOTO2.PNG"
+             alt="MONARO artist portrait"
+             loading="lazy">
+
+        <img src="assets/images/PHOTO3.PNG"
+             alt="MONARO behind the DJ booth"
+             loading="lazy">
+
+        <img src="assets/images/PHOTO4.PNG"
+             alt="MONARO live performance in Phnom Penh"
+             loading="lazy">
+
+        <img src="assets/images/PHOTO5.PNG"
+             alt="Open format DJ MONARO"
+             loading="lazy">
+
+    </div>
+</section>
 
     <!-- SOCIAL BAR -->
     <div class="social-bar">
